@@ -1,0 +1,35 @@
+# Site settings. Edit the values below, then commit.
+title: Signal and Sense
+tagline: Applied AI, statistics and high-dimensional data
+description: Notes, projects and write-ups on applied AI, statistics and high-dimensional data analysis.
+
+# For a user site (repo named <username>.github.io) leave baseurl empty.
+# For a project site (any other repo name) set baseurl: "/repo-name".
+url: "https://ravindrakp.github.io"
+baseurl: ""
+
+author: Ravindra Kumar Pathak
+github_username: RavindraKP
+linkedin_url: ""
+email: ""
+
+markdown: kramdown
+kramdown:
+  math_engine: null
+permalink: /blog/:year/:month/:slug/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope: { path: "", type: "posts" }
+    values: { layout: "post" }
+  - scope: { path: "", type: "projects" }
+    values: { layout: "project" }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

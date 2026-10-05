@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article>
+  <header class="article-head">
+    <p class="eyebrow">{{ page.sector }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lede">{{ page.summary }}</p>
+    <dl class="facts">
+      <dt>Status</dt><dd>{{ page.status | default: "Planned" }}</dd>
+      {% if page.dataset %}<dt>Dataset</dt><dd>{{ page.dataset }}</dd>{% endif %}
+      {% if page.concepts %}<dt>Concepts</dt><dd>{{ page.concepts | join: ", " }}</dd>{% endif %}
+      {% if page.github and page.github != "" %}<dt>Code</dt><dd><a href="{{ page.github }}">{{ page.github }}</a></dd>{% endif %}
+    </dl>
+  </header>
+  <div class="prose">{{ content }}</div>
+  <p class="back"><a href="{{ '/projects/' | relative_url }}">All projects</a></p>
+</article>
