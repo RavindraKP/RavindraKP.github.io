@@ -10,33 +10,44 @@
 </head>
 <body>
 <header class="site-head"><div class="wrap">
-<a class="brand" href="../index.html">Ravindra Kumar Pathak</a>
-<nav class="nav" aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+<a class="brand" href="../index.html"><b>Ravindra Kumar Pathak</b><span>AI Product Portfolio</span></a>
+<nav class="nav" aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#approach">Approach</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
 </div></header>
 <main>
-<div class="wrap read">
-<div class="cs-head">
-<a class="back" href="../index.html#work">All case studies</a>
+<div class="band"><div class="wrap cs-band">
+<p class="crumb"><a href="../index.html#work">Case studies</a> / Predictive models</p>
 <div class="pills"><span class="pill live">Used in operations</span></div>
 <h1>Prediction for planning: Prelims cutoff, mentoring demand and qualification likelihood</h1>
 <p class="summary">Three statistical models used to plan resources and target help: a yearly Prelims cutoff forecast, a daily mentoring demand forecast and a likelihood score for clearing Prelims.</p>
-<div class="facts"><span><strong>Role:</strong> Owner and modeller</span><span><strong>Period:</strong> 2019 to 2026</span><span><strong>Areas:</strong> Regression, Forecasting, Clustering, Survey design</span></div>
-</div>
-<div class="numbers"><div class="num"><b>3</b><span>models in regular use</span></div><div class="num"><b>10,000+</b><span>students in mentoring programmes</span></div><div class="num"><b>50+</b><span>mentors allocated</span></div><div class="num"><b>Yearly</b><span>Prelims cutoff forecast</span></div></div>
-<div class="cs-body">
+</div></div>
+<div class="wrap cs-layout">
+<div class="cs-main">
+<div class="numbers"><div class="num"><b>10,000+</b><span>students in mentoring programmes</span></div><div class="num"><b>50+</b><span>mentors allocated</span></div><div class="num"><b>3</b><span>models in regular use</span></div></div>
 <section><h2>The problem</h2><p>Students want to know where they stand after the Prelims exam, long before official results.</p><p>Mentoring requests arrived through forms, email and calls with no forecast, so mentors were either overloaded or idle, and help did not always reach the students who could benefit most.</p></section>
 <section><h2>Who it serves</h2><ul><li>Aspirants waiting for Prelims results.</li><li>Mentoring and academic operations teams.</li></ul></section>
 <section><h2>My role</h2><p>I designed and built all three models, including the survey behind the cutoff forecast and the data workflows for mentoring requests, allocation, completion and feedback.</p></section>
-<section><h2>How it works</h2><ol class="flow"><li class="">Survey responses and historical exam data</li><li class="">Cutoff estimated with regression, distribution fitting and clustering</li><li class="">Mentoring requests tracked from request to session held</li><li class="">Daily demand forecast and mentor allocation</li><li class="">Prelims and test-series performance combined into a likelihood score</li><li class="">Shortlisted students matched with mentors</li></ol></section>
+
+<section><h2>How it works</h2><ol class="steps"><li>Survey responses and historical exam data</li><li>Cutoff estimated with regression, distribution fitting and clustering</li><li>Mentoring requests tracked from request to session held</li><li>Daily demand forecast and mentor allocation</li><li>Prelims and test-series performance combined into a likelihood score</li><li>Shortlisted students matched with mentors</li></ol></section>
 <section><h2>Key decisions and trade-offs</h2><div class="decision"><h3>Track demand to the session actually held</h3><p>Requests were followed through confirmation to completed sessions, so the forecast predicts real workload, not raw interest.</p></div><div class="decision"><h3>Combine several performance signals</h3><p>The likelihood score uses actual Prelims performance with past Prelims and Mains test-series results, so one bad test does not decide a student&#x27;s support.</p></div><div class="decision"><h3>Use mentors where they change outcomes</h3><p>Shortlisting students with a realistic chance of clearing put scarce mentor time where it mattered most.</p></div></section>
 <section><h2>How quality is measured</h2><ul><li>Each cutoff forecast can be checked against the official cutoff once results are out.</li><li>Demand forecasts are built on sessions actually held, so they can be checked against real mentor workload.</li></ul></section>
 <section><h2>Outcome</h2><ul><li>An annual Prelims cutoff forecast, released after each exam.</li><li>Mentor allocation planned from forecasts across three mentoring programmes, with 50+ mentors supporting 10,000+ students.</li></ul></section>
-<section><h2>What I would do differently</h2><ul><li>Publish the forecast range and its past accuracy, not a single number.</li><li>Add the forecasts to a live dashboard for the operations team instead of periodic reports.</li></ul></section>
+<div class="callout"><h2>Beyond education</h2><p>Demand forecasting and propensity scoring for scarce resources are standard tools in operations, sales and customer success.</p></div>
+<nav class="pager" aria-label="Case studies"><a href="sandhan.html"><small>Previous</small>Sandhan</a></nav>
 </div>
+<aside class="aside" aria-label="At a glance">
+<dl>
+<div><dt>Role</dt><dd>Owner and modeller</dd></div>
+<div><dt>Period</dt><dd>2019 to 2026</dd></div>
+<div><dt>Worked with</dt><dd>Mentoring and academic operations teams</dd></div>
+<div><dt>Areas</dt><dd>Regression, Forecasting, Clustering, Survey design</dd></div>
+</dl>
+<nav aria-label="All case studies"><a href="copyeval.html">CopyEval</a><a href="current-affairs.html">Digital Current Affairs</a><a href="ai-classroom.html">AI in Classroom</a><a href="vision-intelligence.html">Vision Intelligence</a><a href="evalflow.html">EvalFlow</a><a href="sandhan.html">Sandhan</a></nav>
+</aside>
 </div>
 </main>
 <footer class="site-foot"><div class="wrap">
-Case studies describe products I led or contributed to. Figures are as reported from the live products. No proprietary code, data or credentials are published here.
+<span>Ravindra Kumar Pathak &middot; <a href="mailto:rkp.stat@gmail.com">rkp.stat@gmail.com</a> &middot; <a href="https://www.linkedin.com/in/ravindra-pathak-987945174">LinkedIn</a></span>
+<span>Case studies describe products I led or contributed to. Figures are as reported from the live products. No proprietary code, data or credentials are published here.</span>
 </div></footer>
 </body>
 </html>
