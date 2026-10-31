@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in Classroom case study | Ravindra Kumar Pathak</title>
+<meta name="description" content="Turns every recorded lecture into a detailed summary, a short revision note, an MCQ quiz and a subjective assignment, reviewed by a small team before students see it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="../index.html">Ravindra Kumar Pathak</a>
+<nav class="nav" aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+<main>
+<div class="wrap read">
+<div class="cs-head">
+<a class="back" href="../index.html#work">All case studies</a>
+<div class="pills"><span class="pill live">Live</span></div>
+<h1>AI in Classroom: lecture-to-learning-content pipeline</h1>
+<p class="summary">Turns every recorded lecture into a detailed summary, a short revision note, an MCQ quiz and a subjective assignment, reviewed by a small team before students see it.</p>
+<div class="facts"><span><strong>Role:</strong> Product lead</span><span><strong>Period:</strong> 2022 to 2024</span><span><strong>Areas:</strong> Transcription, LLM pipelines, Bilingual content, Reviewer workflow, GCP</span></div>
+</div>
+<div class="numbers"><div class="num"><b>10,000+</b><span>students served daily</span></div><div class="num"><b>24–48h → 4–6h</b><span>content turnaround per lecture</span></div><div class="num"><b>~60 → 5–6</b><span>people needed for review</span></div><div class="num"><b>200+</b><span>NCERT lectures with AI content</span></div></div>
+<div class="cs-body">
+<section><h2>The problem</h2><p>Each classroom lecture needed a summary, revision notes, a quiz and an assignment. Writing these by hand took one to two days per lecture and a team of about 60 people.</p><p>Students wanted the material while the lecture was still fresh.</p></section>
+<section><h2>Who it serves</h2><ul><li>Classroom programme students on the learning platform.</li><li>Content reviewers and batch coordinators.</li></ul></section>
+<section><h2>My role</h2><p>I led the product: defined the output set for each lecture, the review workflow and the controls coordinators needed, and worked with engineering on the pipeline and its monitoring.</p></section>
+<section><h2>How it works</h2><ol class="flow"><li class="">Lecture video recorded</li><li class="">Transcribed</li><li class="">Detailed class summary</li><li class="">Short revision summary</li><li class="">MCQ quiz of 10 to 16 questions</li><li class="">One subjective assignment</li><li class="human">Reviewer approves</li><li class="">Published to the platform</li></ol><p class="flow-note">Step 7 is the human review point. Failures at any stage raise an alert to the team.</p></section>
+<section><h2>Key decisions and trade-offs</h2><div class="decision"><h3>Keep a reviewer, shrink the team</h3><p>AI drafts every output, and a small review team approves it. Quality stayed under human control while the work changed from writing to checking.</p></div><div class="decision"><h3>Bilingual from the start</h3><p>English and Hindi outputs are generated in the same run, so Hindi-medium batches are not served late.</p></div><div class="decision"><h3>Give coordinators batch-level controls</h3><p>Coordinators can switch outputs on or off per batch and watch transcription status, so one failed lecture does not hold up a batch.</p></div><div class="decision"><h3>Extend, don&#x27;t rebuild</h3><p>NCERT in Classroom reused the same pipeline for 200+ lectures and added a chatbot over lectures, NCERT books, current affairs and past papers.</p></div></section>
+<section><h2>How quality is measured</h2><ul><li>Every output passes reviewer approval before publication.</li><li>Transcription monitoring and failure alerts catch broken runs before students notice.</li><li>The shared question-generation engine raised question acceptance from about 50% to 80% through prompt, model and evaluation changes.</li></ul></section>
+<section><h2>Outcome</h2><ul><li>Turnaround per lecture down from 24–48 hours to 4–6 hours.</li><li>Review team down from about 60 people to 5–6.</li><li>Serves 10,000+ students every day.</li></ul></section>
+<section><h2>What I would do differently</h2><ul><li>Log reviewer edits per output type, so the weakest output gets prompt work first.</li><li>Ask students to rate each summary and quiz, to measure usefulness, not only correctness.</li></ul></section>
+</div>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+Case studies describe products I led or contributed to. Figures are as reported from the live products. No proprietary code, data or credentials are published here.
+</div></footer>
+</body>
+</html>
