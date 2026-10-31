@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EvalFlow case study | Ravindra Kumar Pathak</title>
+<meta name="description" content="A dual-engine assessment system that grades handwritten school tests in humanities and STEM, and sends uncertain cases to teachers.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="../index.html">Ravindra Kumar Pathak</a>
+<nav class="nav" aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+<main>
+<div class="wrap read">
+<div class="cs-head">
+<a class="back" href="../index.html#work">All case studies</a>
+<div class="pills"><span class="pill pilot">Pilot</span></div>
+<h1>EvalFlow: AI assessment for K-12 schools</h1>
+<p class="summary">A dual-engine assessment system that grades handwritten school tests in humanities and STEM, and sends uncertain cases to teachers.</p>
+<div class="facts"><span><strong>Role:</strong> Contributor</span><span><strong>Period:</strong> 2022 to 2024</span><span><strong>Areas:</strong> Handwriting recognition, RAG, Confidence routing, Responsible AI</span></div>
+</div>
+<div class="numbers"><div class="num"><b>~90%</b><span>of grading automated</span></div><div class="num"><b>0.77–0.81</b><span>QWK against expert evaluators</span></div><div class="num"><b>98%</b><span>Devanagari handwriting accuracy</span></div><div class="num"><b>45 → 7 days</b><span>feedback turnaround</span></div></div>
+<div class="cs-body">
+<section><h2>The problem</h2><p>Teachers spend many hours grading handwritten tests, and students often get feedback weeks after the test, when it no longer helps.</p><p>Many teachers in the target schools have limited comfort with digital tools, so a dashboard-only product would not be used.</p></section>
+<section><h2>Who it serves</h2><ul><li>Teachers and school administrators.</li><li>Students in K-12 classrooms, including Hindi-medium students.</li></ul></section>
+<section><h2>My role</h2><p>I contributed to the product as part of the VisionIAS AI team, drawing on the answer-evaluation work: evaluation design, quality measurement and the human review flow.</p></section>
+<section><h2>How it works</h2><ol class="flow"><li class="">Answer sheets scanned</li><li class="">Handwriting read, including Devanagari</li><li class="">Sent to the humanities or STEM engine</li><li class="">Graded against the rubric</li><li class="">Confidence checked</li><li class="human">Low-confidence answers go to a teacher</li><li class="">Printed feedback returned to the class</li></ol><p class="flow-note">Step 6 is the human review point.</p></section>
+<section><h2>Key decisions and trade-offs</h2><div class="decision"><h3>Two engines, not one</h3><p>Humanities answers are judged on content and structure; STEM answers on steps and working. Separate engines let each be tuned and measured on its own terms.</p></div><div class="decision"><h3>Let the model say it is unsure</h3><p>Answers below a confidence threshold go to a teacher. This kept automation high without asking teachers to trust every grade.</p></div><div class="decision"><h3>Print the feedback</h3><p>Paper feedback fits how these classrooms already work, and removes the need for every teacher to learn a new tool.</p></div><div class="decision"><h3>Protect students by design</h3><p>Student details are masked before AI processing, and bias guardrails are applied to the grading prompts.</p></div></section>
+<section><h2>How quality is measured</h2><ul><li>QWK of 0.77 to 0.81 against expert evaluators.</li><li>98% handwriting accuracy on Devanagari, trained on 100,000+ scripts.</li><li>Share of answers graded without human review: about 90%.</li></ul></section>
+<section><h2>Outcome</h2><ul><li>Grading cost reduced about 100 times; turnaround cut from 45 days to 7.</li><li>Piloted at InfinityVision Coaching and RDGV School.</li><li>Shortlisted in the NITI Aayog AI by HER Challenge (Education) and recognised at the AI Impact India Summit.</li></ul></section>
+<section><h2>What I would do differently</h2><ul><li>Set the confidence threshold per subject together with teachers, rather than one threshold for all.</li><li>Track how often teachers override AI grades, as the clearest early signal of quality drift.</li></ul></section>
+</div>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+Case studies describe products I led or contributed to. Figures are as reported from the live products. No proprietary code, data or credentials are published here.
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CopyEval case study | Ravindra Kumar Pathak</title>
+<meta name="description" content="A pipeline that reads a student&#x27;s scanned handwritten answer, marks it the way an examiner would, and returns the original pages with margin notes, ticks and marks.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="../index.html">Ravindra Kumar Pathak</a>
+<nav class="nav" aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+<main>
+<div class="wrap read">
+<div class="cs-head">
+<a class="back" href="../index.html#work">All case studies</a>
+<div class="pills"><span class="pill live">Live</span></div>
+<h1>AI evaluation of handwritten UPSC Mains answers</h1>
+<p class="summary">A pipeline that reads a student&#x27;s scanned handwritten answer, marks it the way an examiner would, and returns the original pages with margin notes, ticks and marks.</p>
+<div class="facts"><span><strong>Role:</strong> Product lead</span><span><strong>Period:</strong> 2022 to 2026</span><span><strong>Areas:</strong> OCR, Multi-model LLM pipeline, Human baselines, Blinded A/B tests</span></div>
+</div>
+<div class="numbers"><div class="num"><b>~97%</b><span>lower evaluator cost per answer script</span></div><div class="num"><b>0.77–0.81</b><span>QWK agreement with expert evaluators</span></div><div class="num"><b>~4 hours</b><span>batch turnaround, down from days</span></div><div class="num"><b>10,000+</b><span>scripts a day of capacity</span></div></div>
+<div class="cs-body">
+<section><h2>The problem</h2><p>Mains preparation depends on writing answers and getting detailed feedback on them. Human evaluation of a handwritten answer copy is slow, costly and varies from one evaluator to the next.</p><p>Evaluator capacity also limited how many answers a student could submit, so the most useful practice was being rationed.</p></section>
+<section><h2>Who it serves</h2><ul><li>UPSC Mains aspirants writing in English or Hindi.</li><li>The evaluation and reviewer team, who set the marking standard and check edge cases.</li><li>Several product lines: assignments, essays and test series.</li></ul></section>
+<section><h2>My role</h2><p>I started at VisionIAS as a Mains copy evaluator and later reviewed other evaluators, so I wrote the marking framework from that experience. I defined the pipeline stages, set the quality bar for release and ran model selection, working with the engineering team on delivery.</p></section>
+<section><h2>How it works</h2><ol class="flow"><li class="">Scanned answer copy arrives from the admin system</li><li class="">Pages split and handwriting read (OCR)</li><li class="">Each sentence fact-checked</li><li class="">Question analysed for what it demands</li><li class="">Answer evaluated and marks awarded</li><li class="">Comments rewritten for tone and clarity</li><li class="">Notes, ticks and marks written onto the original pages</li></ol><p class="flow-note">If more than half the text is in Devanagari, the copy switches to a Hindi set of prompts automatically.</p></section>
+<section><h2>Key decisions and trade-offs</h2><div class="decision"><h3>Break one big judgement into small checked steps</h3><p>Reading, fact-checking, question analysis and marking each run as a separate step with stored output. Any mark can be traced back to the step that produced it, and a weak step can be fixed without touching the rest.</p></div><div class="decision"><h3>Match the model to the job</h3><p>A fast, low-cost model reads handwriting and checks facts; a stronger model makes the marking judgement. Models are a configuration setting, so switching provider does not need a rebuild.</p></div><div class="decision"><h3>Route Hindi answers to Hindi prompts</h3><p>Hindi-medium students should not be judged by prompts written for English answers. Language detection after OCR decides the route.</p></div><div class="decision"><h3>Give feedback where students expect it</h3><p>Students are used to examiner notes in the margin, so the output is the annotated original copy, not a separate report.</p></div></section>
+<section><h2>How quality is measured</h2><ul><li>Agreement with expert evaluators measured with Quadratic Weighted Kappa (QWK), which suits ordered marks: 0.77 to 0.81.</li><li>Human baseline scores are stored, so every new pipeline version is scored against human evaluators before release. 36 prompt versions were run this way.</li><li>Candidate models are compared with the live pipeline in blinded expert reviews (Model A against Model B) and dropped on statistical evidence, so model changes rest on evidence rather than vendor claims.</li></ul></section>
+<section><h2>Outcome</h2><ul><li>About 97% lower evaluator cost per script and about 4-hour batch turnaround.</li><li>Capacity for 10,000+ scripts a day.</li><li>The same evaluation engine now supports several VisionIAS products.</li></ul></section>
+<section><h2>What I would do differently</h2><ul><li>Run model comparisons continuously instead of as occasional projects, so upgrades do not lag behind newer models.</li><li>Add automatic checks for layout errors such as notes placed on the wrong page or a wrong total, because those are the first things a student notices.</li><li>Measure the student outcome as well as agreement: do marks improve across a student&#x27;s later attempts?</li></ul></section>
+</div>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+Case studies describe products I led or contributed to. Figures are as reported from the live products. No proprietary code, data or credentials are published here.
+</div></footer>
+</body>
+</html>

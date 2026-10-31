@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vision Intelligence case study | Ravindra Kumar Pathak</title>
+<meta name="description" content="A chat assistant students can open on any page, answering from a repository of 1 lakh+ documents that also feeds question generation and answer evaluation.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="../index.html">Ravindra Kumar Pathak</a>
+<nav class="nav" aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+<main>
+<div class="wrap read">
+<div class="cs-head">
+<a class="back" href="../index.html#work">All case studies</a>
+<div class="pills"><span class="pill live">Live</span></div>
+<h1>Vision Intelligence and the AI Knowledge Repository</h1>
+<p class="summary">A chat assistant students can open on any page, answering from a repository of 1 lakh+ documents that also feeds question generation and answer evaluation.</p>
+<div class="facts"><span><strong>Role:</strong> Product lead</span><span><strong>Period:</strong> 2024 to 2026</span><span><strong>Areas:</strong> RAG, Vector search, Monetisation, Data pipelines</span></div>
+</div>
+<div class="numbers"><div class="num"><b>1 lakh+</b><span>documents in the knowledge repository</span></div><div class="num"><b>2,278+</b><span>conversations in 30 days</span></div><div class="num"><b>9,244+</b><span>messages in the same period</span></div><div class="num"><b>3 / 25</b><span>free and paid questions a day</span></div></div>
+<div class="cs-body">
+<section><h2>The problem</h2><p>Students have doubts at all hours, and mentors cannot answer every one. The answers already existed across magazines, past papers, textbooks and lecture transcripts, but were hard to find.</p><p>The company also needed one reliable source of knowledge that several AI products could share.</p></section>
+<section><h2>Who it serves</h2><ul><li>Students on the current-affairs platform and other VisionIAS products.</li><li>Content, classroom and mentoring teams, who use what students ask to find gaps.</li></ul></section>
+<section><h2>My role</h2><p>I led both the repository and the assistant: what goes into the repository, how it is kept current, how the assistant answers and escalates, and the usage model that links it to paid plans.</p></section>
+<section><h2>How it works</h2><ol class="flow"><li class="">Current affairs, past papers, magazines, textbooks and transcripts collected</li><li class="">Each document embedded and indexed</li><li class="">Daily pipelines add new content</li><li class="">Student asks a question, optionally from an article page</li><li class="">Relevant passages retrieved and an answer written with links</li><li class="human">Unresolved questions go to a human expert</li></ol><p class="flow-note">Step 6 is the human escalation point.</p></section>
+<section><h2>Key decisions and trade-offs</h2><div class="decision"><h3>Build the repository as a shared asset</h3><p>The same repository feeds the assistant, MCQ generation and Mains answer evaluation, so improving it improves every product.</p></div><div class="decision"><h3>Index on publish</h3><p>Every new article or PDF published on the current-affairs platform is sent for indexing automatically, so answers stay current with no manual step.</p></div><div class="decision"><h3>Use the daily limit as a pricing lever</h3><p>Free users get 3 questions a day and subscribers 25. The limits are settings, not code, so they can be tuned against conversion.</p></div><div class="decision"><h3>Answer in context</h3><p>The assistant can be tied to the article a student is reading, so short questions get answers about that article.</p></div></section>
+<section><h2>How quality is measured</h2><ul><li>Answers link back to the source material, so students can check them.</li><li>Student questions are analysed for concept gaps and shared with content, classroom and mentoring teams.</li></ul></section>
+<section><h2>Outcome</h2><ul><li>2,278+ conversations and 9,244+ messages in a 30-day period on the current-affairs deployment alone.</li><li>The repository of 1 lakh+ documents in mixed formats became the foundation for three AI products.</li></ul></section>
+<section><h2>What I would do differently</h2><ul><li>Add answer ratings from the first release, so weak topics show up without manual review.</li><li>Count a question against the daily limit only after an answer is delivered, so a failed answer does not cost a free user one of their three.</li><li>Track answer failures and time-outs as a product metric.</li></ul></section>
+</div>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+Case studies describe products I led or contributed to. Figures are as reported from the live products. No proprietary code, data or credentials are published here.
+</div></footer>
+</body>
+</html>

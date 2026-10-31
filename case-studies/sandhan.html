@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandhan case study | Ravindra Kumar Pathak</title>
+<meta name="description" content="A practice platform where learners build their own tests from 25,000+ tagged MCQs, with learner personas and an adaptive engine prototype on top.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="../index.html">Ravindra Kumar Pathak</a>
+<nav class="nav" aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+<main>
+<div class="wrap read">
+<div class="cs-head">
+<a class="back" href="../index.html#work">All case studies</a>
+<div class="pills"><span class="pill live">Live, adaptive engine in prototype</span></div>
+<h1>Sandhan: adaptive UPSC Prelims practice</h1>
+<p class="summary">A practice platform where learners build their own tests from 25,000+ tagged MCQs, with learner personas and an adaptive engine prototype on top.</p>
+<div class="facts"><span><strong>Role:</strong> Product lead</span><span><strong>Period:</strong> 2022 to 2024</span><span><strong>Areas:</strong> Personalisation, Learner segmentation, Graph neural networks, Product analytics</span></div>
+</div>
+<div class="numbers"><div class="num"><b>28,000+</b><span>learners</span></div><div class="num"><b>424,000+</b><span>tests taken</span></div><div class="num"><b>3.8M+</b><span>questions attempted</span></div><div class="num"><b>25,000+</b><span>MCQs in the bank</span></div></div>
+<div class="cs-body">
+<section><h2>The problem</h2><p>Prelims preparation means answering thousands of MCQs. Fixed test series give every learner the same questions, so strong learners repeat what they know and weak learners hit walls.</p><p>The question bank itself had mapping gaps, so no adaptive system could work on top of it yet.</p></section>
+<section><h2>Who it serves</h2><ul><li>UPSC Prelims aspirants on web and mobile.</li></ul></section>
+<section><h2>My role</h2><p>I wrote the product requirements, defined the adaptive-practice concept and the learner personas, fixed the question data, built the dashboards and built the adaptive engine prototype myself.</p></section>
+<section><h2>How it works</h2><ol class="flow"><li class="">Questions tagged by subject, topic, subtopic and Bloom&#x27;s level</li><li class="">Difficulty set from how learners actually performed</li><li class="">Learner builds a custom test</li><li class="">Results feed learner profiles</li><li class="">Learners grouped into personas</li><li class="">Adaptive engine prototype recommends the next questions</li></ol><p class="flow-note">Steps 1 to 5 are live; step 6 is a prototype.</p></section>
+<section><h2>Key decisions and trade-offs</h2><div class="decision"><h3>Fix the data before the model</h3><p>I corrected mapping gaps and classified every question first. An adaptive engine is only as good as the tags under it.</p></div><div class="decision"><h3>Measure difficulty, don&#x27;t assume it</h3><p>Difficulty comes from historical learner performance rather than expert opinion alone.</p></div><div class="decision"><h3>Design for four kinds of learner</h3><p>K-means segmentation produced four personas: Elite, Power User, Comfort Seeker and Ghost. Each needs a different nudge, from harder questions to simply coming back.</p></div><div class="decision"><h3>Ship control first, adaptivity second</h3><p>Custom tests gave learners value from day one and produced the data the adaptive engine needs.</p></div></section>
+<section><h2>How quality is measured</h2><ul><li>Dashboards for onboarding, test creation, completion, repeat use and learner behaviour.</li><li>The prototype uses GraphSAGE (PyTorch Geometric) over the question and learner graph, with knowledge-tracing ideas.</li></ul></section>
+<section><h2>Outcome</h2><ul><li>28,000+ learners took 424,000+ tests and attempted 3.8M+ questions.</li><li>A clean, tagged question bank that now feeds other products.</li></ul></section>
+<section><h2>What I would do differently</h2><ul><li>Run a controlled test of adaptive against self-chosen tests, measured on score improvement, before a full rollout.</li><li>Design a specific re-engagement path for the Ghost persona earlier, since that group is where retention is won or lost.</li></ul></section>
+</div>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+Case studies describe products I led or contributed to. Figures are as reported from the live products. No proprietary code, data or credentials are published here.
+</div></footer>
+</body>
+</html>
